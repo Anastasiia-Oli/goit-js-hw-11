@@ -38,6 +38,11 @@ const submit = form.addEventListener('submit', function (event) {
     getImagesByQuery(queryVal);
   } catch (error) {
     console.error(error);
+    iziToast.error({
+      title: 'Error',
+      message: `${error}`,
+      position: 'topRight',
+    });
   } finally {
     form.reset();
   }

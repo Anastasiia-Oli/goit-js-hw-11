@@ -33,6 +33,11 @@ export const getImagesByQuery = query => {
     })
     .catch(error => {
       console.log(error);
+      iziToast.error({
+        title: 'Error',
+        message: `${error}`,
+        position: 'topRight',
+      });
     })
     .finally(() => {
       hideLoader();
